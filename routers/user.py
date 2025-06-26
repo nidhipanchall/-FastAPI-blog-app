@@ -9,7 +9,6 @@ router = APIRouter(
     tags=["Users"]
 )
 
-
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 @router.post("/", response_model=schemas.UserOut, status_code=status.HTTP_201_CREATED)

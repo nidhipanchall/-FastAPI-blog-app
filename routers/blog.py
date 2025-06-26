@@ -47,3 +47,15 @@ def delete_blog(id: int, db: Session = Depends(get_db)):
     db.delete(blog)
     db.commit()
     return {"message": f"Blog with ID {id} deleted successfully"}
+
+
+# @router.get("/secure", dependencies=[Depends(get_current_user)])
+# def secure_blog_list():
+#     return {"message": "You are authorized to see this!"}
+
+
+
+# {
+#   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNzUwODM4Nzk4fQ.W3ASvtX5i0gHGIs7LLuBz-RhxOk2Jf5lHKPJqXaFp4k",
+#   "token_type": "bearer"
+# }
